@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Main {
+public class Main_a {
     public static void main(String[] args) throws InterruptedException {
         int n = 5, m = 16;
 
