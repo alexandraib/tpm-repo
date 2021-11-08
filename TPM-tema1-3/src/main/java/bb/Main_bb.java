@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Main_bb {
     public static void main(String[] args) throws InterruptedException {
-        int n = 4, m = 8;
+        int n = 4, m = 16;
         int numberOfPortions = 10;
         int[] threadPortions = new int[m];
 
