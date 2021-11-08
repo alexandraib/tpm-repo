@@ -10,7 +10,6 @@ public class FairLock {
     private Queue<QueueData> queue = new PriorityBlockingQueue<>();
     private final Lock lock = new ReentrantLock();
     private final Lock queueSizeLock = new ReentrantLock();
-    private final Condition condition = lock.newCondition();
 
     public synchronized void lock(int pid) {
         long startTime = System.nanoTime();
