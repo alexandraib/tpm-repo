@@ -7,8 +7,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Main_bb {
     public static void main(String[] args) throws InterruptedException {
-        int n = 4, m = 16;
-        int numberOfPortions = 10;
+
+        int n = 4, m = 8;
+        int numberOfPortions = 10000;
         int[] threadPortions = new int[m];
 
         for (int i = 0; i < m; i++)
@@ -23,6 +24,8 @@ public class Main_bb {
         Chef chef = new Chef(n, m, potLock, pot, numberOfPortions);
         Thread threadChef = new Thread(chef);
 
+        long start = System.currentTimeMillis();
+
         threadChef.start();
 
         for (int i = 0; i < m; i++) {
@@ -34,5 +37,9 @@ public class Main_bb {
         for (int i = 0; i < m; i++) {
             threadList.get(i).join();
         }
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("Time: " + (end - start));
     }
 }

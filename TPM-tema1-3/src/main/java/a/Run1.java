@@ -16,7 +16,7 @@ public class Run1 implements Runnable {
             lock.lock();
             try {
                 if (pot.getCapacity() > 0) {
-                    System.out.println("Thread " + pid + " done.");
+//                    System.out.println("Thread " + pid + " done.");
                     pot.setCapacity(pot.getCapacity() - 1);
                     break;
                 }

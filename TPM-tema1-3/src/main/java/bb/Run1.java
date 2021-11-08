@@ -23,7 +23,7 @@ public class Run1 implements Runnable {
                     if (pot.getCapacity() > 0) {
                         pot.setCapacity(pot.getCapacity() - 1);
                         threadPortions[pid]--;
-                        System.out.println(Arrays.toString(threadPortions));
+//                        System.out.println(Arrays.toString(threadPortions));
                     }
                 } finally {
                     potLock.unlock();

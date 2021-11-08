@@ -18,7 +18,7 @@ public class Chef implements Runnable {
             lock.lock();
             try {
                 if (pot.getCapacity() == 0) {
-                    System.out.println("Capacity = 0");
+//                    System.out.println("Capacity = 0");
                     pot.setCapacity(n);
                     count++;
                 }
@@ -26,6 +26,6 @@ public class Chef implements Runnable {
                 lock.unlock();
             }
         }
-        System.out.println("Done chef");
+//        System.out.println("Done chef");
     }
 }
